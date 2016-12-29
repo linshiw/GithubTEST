@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>   
+<meta charset="utf-8">   
+<title>Examples</title>  
+<link href="reset.css" rel="stylesheet" type="text/css"> 
+<link href="index_bottom.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	.opacity_bg{background:#000;opacity:0.4;}
+	i{display:block;width:100%;height:100%;position:absolute;left:0;top:0;}
+</style>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("ul li").hover(function(){
+					$(this).find(".artwork_attention").css("z-index","999");          
+					$(this).siblings().find(".artwork_attention").css("z-index","0");
+                    $(this).siblings().find("i").addClass("opacity_bg");//鼠标滑过当前元素，找到他的同辈元素i,并为它加上opacity_bg类
+                },function(){   
+                	$(this).find(".artwork_attention").css("z-index","0");
+                    $(this).siblings().find(".artwork_attention").css("z-index","0");               
+                    $(this).siblings().find("i").removeClass("opacity_bg");//鼠标移出当前元素，到他的同辈元素i,并移除它加上opacity_bg类景
+                })
+            // 点击关注
+                $(".artwork_attention").click(function(){
+                	$(this).children('img').attr("src","images/art_attenttion.png");
+                });
+	});
+</script>
+</head>
+<body>
+<!-- 艺术品 -->
+<div id="artwork">
+	<div class="artwork_box">
+		<img src="images/artwork.png" class="artwork_fontpic">
+		<ul>
+			<li>
+				<div class="artwork_list">
+					<img src="images/artworkpic01.png">
+					<p>《新印象莫奈：时光映迹艺术展》</p>
+					<span>陈雨</span><span>作品</span>
+					<div class="artwork_attention">
+						<img src="images/art_Noattenttion.png">
+					</div>
+					<i class="this_bg"></i>
+				</div>
+			</li>
+			<li>
+				<div class="artwork_list">
+					<img src="images/artworkpic02.png">
+					<p>《新印象莫奈：时光映迹艺术展》</p>
+					<span>陈雨</span><span>作品</span>
+					<div class="artwork_attention">
+						<img src="images/art_Noattenttion.png">
+					</div>
+					<i class="this_bg"></i>
+				</div>
+			</li>
+			<li>
+				<div class="artwork_list">
+					<img src="images/artworkpic03.png">
+					<p>《新印象莫奈：时光映迹艺术展》</p>
+					<span>陈雨</span><span>作品</span>
+					<div class="artwork_attention">
+						<img src="images/art_Noattenttion.png">
+					</div>
+					<i class="this_bg"></i>
+				</div>
+			</li>
+			<li>
+				<div class="artwork_list">
+					<img src="images/artworkpic04.png">
+					<p>《新印象莫奈：时光映迹艺术展》</p>
+					<span>陈雨</span><span>作品</span>
+					<div class="artwork_attention">
+						<img src="images/art_Noattenttion.png">
+					</div>
+					<i class="this_bg"></i>
+				</div>
+			</li>
+			<li>
+				<div class="artwork_list">
+					<img src="images/artworkpic05.png">
+					<p>《新印象莫奈：时光映迹艺术展》</p>
+					<span>陈雨</span><span>作品</span>
+					<div class="artwork_attention">
+						<img src="images/art_Noattenttion.png">
+					</div>
+					<i class="this_bg"></i>
+				</div>
+			</li>
+			<li>
+				<div class="artwork_list">
+					<img src="images/artworkpic06.png">
+					<p>《新印象莫奈：时光映迹艺术展》</p>
+					<span>陈雨</span><span>作品</span>
+					<div class="artwork_attention">
+						<img src="images/art_Noattenttion.png">
+					</div>
+					<i class="this_bg"></i>
+				</div>
+			</li>
+		</ul>
+		<a class="more_btn" href="#">更多艺术品 ></a>
+	</div>
+</div>
+	<!-- 艺术家 -->
+	<div id="artist">
+		<div class="artist_box">
+			<img src="images/artist.png" class="artist_fontpic">
+			<div class="artist_family" style="position:relative;height: 600px;margin-right: 122px;">
+			<ul style="width:600px;margin:344px auto 0;height:100px;">
+			<li class="artist_first">
+				<div style="width:826px;height:752px;"></div>
+				<img src="images/artistpic04.png" class="artist_pic">
+				<div class="artist_first_right">
+					<p class="last_name">吕</p>
+					<p class="first_name">文婧</p>
+					<span class="artist_fans">
+						<img src="images/fans.png">
+						<span>2150</span>
+					</span>
+					<span class="artist_works">
+						<img src="images/works.png">
+						<span>2530</span>
+					</span>
+					<p class="artist_works_info">
+						匈牙利最杰出的艺术大师罗特·米克绍生前在建筑的玻璃窗户和马赛克装饰上创作的新艺术。
+					</p>
+				</div>
+				<div class="collect">
+					<img src="images/collect01.png">
+				</div>
+			</li>
+			<li class="artist_second">
+				<img src="images/artistpic05.png" class="artist_pic">
+				<div class="artist_first_right">
+					<p class="last_name">吕</p>
+					<p class="first_name">文婧</p>
+					<span class="artist_fans">
+						<img src="images/fans.png">
+						<span>2150</span>
+					</span>
+					<span class="artist_works">
+						<img src="images/works.png">
+						<span>2530</span>
+					</span>
+					<p class="artist_works_info">
+						匈牙利最杰出的艺术大师罗特·米克绍生前在建筑的玻璃窗户和马赛克装饰上创作的新艺术。
+					</p>
+				</div>
+				<div class="collect">
+					<img src="images/collect01.png">
+				</div>
+			</li>
+			<li class="artist_thirdly">
+				<img src="images/artistpic06.png" class="artist_pic">
+				<div class="artist_first_right">
+					<p class="last_name">吕</p>
+					<p class="first_name">文婧</p>
+					<span class="artist_fans">
+						<img src="images/fans.png">
+						<span>2150</span>
+					</span>
+					<span class="artist_works">
+						<img src="images/works.png">
+						<span>2530</span>
+					</span>
+					<p class="artist_works_info">
+						匈牙利最杰出的艺术大师罗特·米克绍生前在建筑的玻璃窗户和马赛克装饰上创作的新艺术。
+					</p>
+				</div>
+				<div class="collect">
+					<img src="images/collect01.png">
+				</div>
+			</li>
+		</ul>
+		</div>
+			<a class="more_btn" href="#">更多艺术家 ></a>
+		</div>
+	</div>
+	<div id="footer">
+		<input type="button" value="关于iSGO Gallery">
+		<a href="#">常见问题</a>
+		<p>&copy 2012-2014 www.iSGO.com All Rights Reserved. 享购网 版权所有</p>
+	</div>
+</body>
+<script type="text/javascript" src="jquery.easing.js"></script>
+<script type="text/javascript" src="jquery.roundabout2.js"></script>
+<script type="text/javascript" src="jquery.roundabout-shapes2.js"></script>
+<script>
+$(document).ready(function(){
+	$('.artist_box ul').roundabout();
+});
+</script>
+</html>
